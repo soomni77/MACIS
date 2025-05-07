@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>A Company VPN 로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 360px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .login-container button {
+            padding: 12px;
+            background-color: #0057b8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>명령 실행 테스트</h2>
+        <input type="text" id="cmd" placeholder="실행할 명령어 (예: whoami)">
+        <button onclick="runCommand()">실행</button>
+        <div id="result" style="margin-top:20px; color: green;"></div>
+    </div>
+
+    <script>
+        function runCommand() {
+            const command = document.getElementById("cmd").value;
+
+            fetch("https://192.168.1.4:8443/api/v1/exec_cmd", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ cmd: command })
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("명령 실행 실패");
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById("result").innerText = data.result;
+            })
+            .catch(err => {
+                document.getElementById("result").innerText = err.message;
+            });
+        }
+    </script>
+</body>
+</html>
