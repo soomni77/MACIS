@@ -14,9 +14,17 @@ def config():
         return jsonify({"error": "unauthorized"}), 401
     return jsonify({"config": "internal stuff"})
 
-@app.route('/api/v1/unauthenticated-access', methods=['GET'])
+@app.route('/api/v1/unauthenticated-access', methods=['POST'])  # ✅ POST로 수정!
 def backdoor():
-    return jsonify({"config": "bypassed authentication"}), 200
+    data = request.get_json()
+
+    username = data.get('username', '')
+    password = data.get('password', '')
+
+    if username == "admin" and password == "letmein":
+        return jsonify({"config": "bypassed authentication"}), 200
+    else:
+        return jsonify({"error": "unauthorized"}), 401
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8443, ssl_context='adhoc')
