@@ -1,1 +1,1 @@
-# M-A-Cyber-Incident-Simulation-MACIS-
+# M&A Cyber Incident Simulation (MACIS)
