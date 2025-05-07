@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>명령어 실행</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .command-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 500px;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+            padding: 10px;
+            font-family: monospace;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="command-container">
+        <h2>명령어 실행 페이지</h2>
+        <form method="post">
+            <input type="text" name="command" placeholder="명령어 입력" style="width:80%; padding:10px;">
+            <button type="submit">실행</button>
+        </form>
+        {% if output %}
+            <h3>실행 결과:</h3>
+            <textarea readonly>{{ output }}</textarea>
+        {% endif %}
+    </div>
+</body>
+</html>
