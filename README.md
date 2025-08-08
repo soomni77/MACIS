@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="119" src="https://github.com/user-attachments/assets/469298f7-f888-4406-8331-d353504a8668" /># M&A Cyber Incident Simulation (MACIS)
+# M&A Cyber Incident Simulation (MACIS)
 
 ## 침해사고 시나리오 배경
 <img width="1920" height="1080" alt="시나리오-배경" src="https://github.com/user-attachments/assets/2f3b8fae-dc10-4fd5-ab5f-db48f9c91795" />
@@ -50,16 +50,15 @@
 
 #### 4. 생산량 관리 서버
 
-
 #### 5. DB 서버
+<img width="1920" height="1080" alt="113" src="https://github.com/user-attachments/assets/25efb64f-4c91-439b-8713-dc4c13339da4" />
+<img width="1920" height="1080" alt="114" src="https://github.com/user-attachments/assets/2d4dbded-be1c-4491-894c-5c3ee9e1b290" />
 <img width="1920" height="1080" alt="115" src="https://github.com/user-attachments/assets/04f80adb-80ea-4bff-bae1-6e55fc50a591" />
 <img width="1920" height="1080" alt="116" src="https://github.com/user-attachments/assets/fcebde6c-3156-4e77-aa7b-f364ed2b6cfb" />
 <img width="1920" height="1080" alt="117" src="https://github.com/user-attachments/assets/68febda6-c599-4d77-be90-c0d3dc30bff7" />
 <img width="1920" height="1080" alt="118" src="https://github.com/user-attachments/assets/4622207a-042c-4c0c-a7b2-6cebcc3044a7" />
 <img width="1920" height="1080" alt="119" src="https://github.com/user-attachments/assets/0002e511-2146-474a-8a15-72121936fd62" />
 <img width="1920" height="1080" alt="120" src="https://github.com/user-attachments/assets/51552985-d022-4a99-bbba-8600aab40cae" />
-<img width="1920" height="1080" alt="113" src="https://github.com/user-attachments/assets/25efb64f-4c91-439b-8713-dc4c13339da4" />
-<img width="1920" height="1080" alt="114" src="https://github.com/user-attachments/assets/2d4dbded-be1c-4491-894c-5c3ee9e1b290" />
 
 #### 6. 내부 통합 서버
 
